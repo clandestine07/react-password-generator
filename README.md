@@ -1,6 +1,6 @@
 # Password Generator App
 
-A sexy and interactive password generator built with React!
+An interactive password generator built with React!
 
 ## Table of Contents
 - [Features](#features)
