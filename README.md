@@ -1,10 +1,24 @@
-# React + Vite
+# Password Generator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sexy and interactive password generator built with React!
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-# password generator using react with copy feature
+- Generate strong and secure passwords.
+- Adjustable password length using a range slider.
+- Include numbers and special characters for added security.
+- Copy the generated password to the clipboard with a single click.
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone [https://github.com/clandestine07/react-password-generator.git]
+cd password-generator-app
+npm install
+npm run dev
