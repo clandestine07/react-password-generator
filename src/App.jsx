@@ -5,7 +5,8 @@ function App() {
   const [isNumber, setisNumber] = useState(false);
   const [isCharacter, setisCharacter] = useState(false);
   const [password, setPassword] = useState("");
-  const [copyNotification, setCopyNotification] = useState(false);
+  // const [copyNotification, setCopyNotification] = useState(false);
+  const [copyText, setCopyText] = useState('copy');
 
   const passwordRef = useRef(null);
 
@@ -31,6 +32,11 @@ function App() {
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0, 20);
     window.navigator.clipboard.writeText(password);
+    setCopyText('Copied')
+    setTimeout(() => {
+      setCopyText('copy')
+    }, 1000);
+
     setCopyNotification(true);
   }, [password]);
 
@@ -38,9 +44,9 @@ function App() {
     generatePassword();
   }, [length, isNumber, isCharacter, setPassword]);
 
-  setTimeout(() => {
-    setCopyNotification(false);
-  }, 3000);
+  // setTimeout(() => {
+  //   setCopyNotification('false');
+  // }, 3000);
 
   return (
     <>
@@ -57,18 +63,21 @@ function App() {
             ref={passwordRef}
           />
           <button
-            className="button w-22 h-12 ml-5 mt-5 hover:border-red-500"
+            className="button w-22 h-12 ml-5 mt-5 hover:border-red-500r"
             onClick={copyToClipboard}
           >
-            copy
+          <p className="text-1xl">{copyText} </p>
           </button>
         </div>
 
-        {copyNotification && (
+
+        {/* conditional rendering */}
+        
+        {/* {copyNotification && (
           <div className="text-green-500 mt-1 text-sm ml-5">
             copied to clipboard
           </div>
-        )}
+        )} */}
 
         <div className="ml-5 mt-10">
           <input
